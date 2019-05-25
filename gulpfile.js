@@ -27,11 +27,11 @@ gulp.task('browser-sync', async () => {
 });
 
 gulp.task('scss-watch', async () => {
-    gulp.watch('app/scss/main.scss', gulp.parallel('scss'));
+    gulp.watch('app/scss/*.scss', gulp.parallel('scss'));
 });
 
 gulp.task('pug-watch', async () => {
-    gulp.watch('app/pug/index.pug', gulp.parallel('pug'));
+    gulp.watch('app/pug/*.pug', gulp.parallel('pug'));
 });
 
 gulp.task('default', gulp.parallel('scss', 'pug', 'browser-sync', 'scss-watch', 'pug-watch'));

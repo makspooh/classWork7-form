@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+@media(max-width: 400px) {
+    .form {
+        max-width: 90%;
+        max-height: 90%;
+
+        &__input {
+        max-width: 90%;
+        max-height: 90%;
+        }
+    }
+    .form__name-container {
+        flex-direction: column;
+        align-items: center;
+
+        div & .form__input {
+            width: 285px;
+            margin: 0;
+
+            &_margin-right {
+                margin-bottom: 15px;
+            }
+        }
+    }
+};
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 340px;
+    height: 450px;
+    border-radius: 5px;
+    padding-top: 25px;
+    box-shadow: 0 0 3px grey;
+
+    &__name-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    &__checkbox-container {
+        text-align: left;
+        width: 90%;
+    }
+
+    &__input {
+        width: 285px;
+        height: 35px;
+        padding-left: 10px;
+        font-family: 'Open Sans', sans-serif;
+
+        &_background-username {
+            background: url('../img/man.png') no-repeat;
+            background-position-x: 98%;
+            background-position-y: center;
+            background-color: $inputBgColor;
+        }
+
+        &_background-password {
+            background: url('../img/lock.png') no-repeat;
+            background-position-x: 98%;
+            background-position-y: center;
+            background-color: $inputBgColor;
+        }
+
+        &_margin-left {
+            margin-left: 10px;
+        }
+
+        &_margin-right {
+            margin-right: 10px;
+        }
+    }
+
+    &__name-container &__input {
+        width: 130px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $pageTextColor;
+        font-weight: bold;
+    }
+
+    &__button {
+        background-color: #fea15d;
+        border: none;
+        width: 95px;
+        height: 35px;
+        border-radius: 5px;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+
+.links__text,
+.checkbox-container__label {
+    color: $pageTextColor;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.links {
+    text-align: center;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox] + label:before {
+    content: url(../img/checked.png);
+    color: transparent;
+    display: inline-block;
+    font-size: 20px;    
+    line-height: 0;
+    margin: -5px 5px 0 0;
+    height: 10px;
+    width: 10px;
+    text-align: center;
+    vertical-align: middle;
+    transition: color ease .3s;
+}
+
+input[type=checkbox]:checked + label:before {
+    content: url(../img/checkbox.png);
+    margin-top: 0;
+}

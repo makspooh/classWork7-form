@@ -1,0 +1,11 @@
+@import 'variables';
+
+.form {
+    background-color: #fff;
+}
+
+.form__input {
+    background-color: $inputBgColor;
+    border: none;
+    border-radius: 5px;
+}

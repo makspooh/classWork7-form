@@ -7,3 +7,20 @@ html(lang="en")
         link(rel="stylesheet", href="./css/main.css")
         title Document
     body
+        .form-container
+            .form-container__headliner
+                h1.form-container__headliner__text #[span Signup] Form
+            form.form(action="#", method="post")
+                .form__name-container
+                    input.form__input.form__input_margin-right(type="text", name="first-name" placeholder="First Name")
+                    input.form__input.form__input_margin-left(type="text", name="last-name" placeholder="Last Name")
+                input.form__input.form__input_background-username(type="text", name="user-name" placeholder="Username")
+                input.form__input(type="email", name="email" placeholder="Email Adress")
+                input.form__input.form__input_background-password(type="password", name="password" placeholder="Password")
+                .form__checkbox-container
+                    input.checkbox-container__input(id="checkbox" type="checkbox", name="")
+                    label.checkbox-container__label(for="checkbox") I Agree to the #[span terms of use]
+                button.form__button(type="submit") Sign Up
+                .form__links.links
+                    p.links__text Have an account with us? #[a.form__link(href="#") Login here]
+                    p.links__text More info about us #[a.form__link(href="#") here]...
