@@ -1,30 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-@media(max-width: 400px) {
-    .form {
-        max-width: 90%;
-        max-height: 90%;
-
-        &__input {
-        max-width: 90%;
-        max-height: 90%;
-        }
-    }
-    .form__name-container {
-        flex-direction: column;
-        align-items: center;
-
-        div & .form__input {
-            width: 285px;
-            margin: 0;
-
-            &_margin-right {
-                margin-bottom: 15px;
-            }
-        }
-    }
-};
-
 .form {
     display: flex;
     flex-direction: column;
@@ -48,9 +23,10 @@
     }
 
     &__input {
-        width: 285px;
+        width: 265px;
         height: 35px;
         padding-left: 10px;
+        padding-right: 30px;
         font-family: 'Open Sans', sans-serif;
 
         &_background-username {
@@ -77,7 +53,7 @@
     }
 
     &__name-container &__input {
-        width: 130px;
+        width: 100px;
     }
 
     &__link {
@@ -87,6 +63,8 @@
     }
 
     &__button {
+        cursor: pointer;
+        outline-color: orangered;
         background-color: #fea15d;
         border: none;
         width: 95px;
@@ -96,7 +74,21 @@
         font-family: 'Open Sans', sans-serif;
         font-size: 14px;
         font-weight: bold;
+        transition-duration: .2s;
     }
+
+    &__button:hover {
+        background-color: orange;
+        transition-duration: .2s;
+    }
+}
+
+.checkbox-container__label:hover {
+    cursor: pointer;
+}
+
+.checkbox-container__label span:hover {
+    color: #505050;
 }
 
 .links__text,
@@ -108,6 +100,14 @@
 
 .links {
     text-align: center;
+
+    &form__link {
+        cursor: pointer;
+    }
+}
+
+.links .form__link:hover {
+    color: #505050;
 }
 
 input[type=checkbox] {
@@ -115,6 +115,7 @@ input[type=checkbox] {
 }
 
 input[type=checkbox] + label:before {
+    cursor: pointer;
     content: url(../img/checked.png);
     color: transparent;
     display: inline-block;
@@ -132,3 +133,26 @@ input[type=checkbox]:checked + label:before {
     content: url(../img/checkbox.png);
     margin-top: 0;
 }
+
+@media(max-width: 400px) {
+    .form {
+        max-width: 90%;
+        max-height: 90%;
+
+        &__input {
+            max-width: 90%;
+            max-height: 90%;
+            width: 285px;
+            margin: 0;
+
+            &_mergin-right {
+                margin-bottom: 15px;
+            }
+        }
+
+        &__name-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+};

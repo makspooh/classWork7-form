@@ -9,7 +9,7 @@ html(lang="en")
     body
         .form-container
             .form-container__headliner
-                h1.form-container__headliner__text #[span Signup] Form
+                h1.form-container__headliner-text #[span Signup] Form
             form.form(action="#", method="post")
                 .form__name-container
                     input.form__input.form__input_margin-right(type="text", name="first-name" placeholder="First Name")
@@ -17,7 +17,7 @@ html(lang="en")
                 input.form__input.form__input_background-username(type="text", name="user-name" placeholder="Username")
                 input.form__input(type="email", name="email" placeholder="Email Adress")
                 input.form__input.form__input_background-password(type="password", name="password" placeholder="Password")
-                .form__checkbox-container
+                .form__checkbox-container.checkbox-container
                     input.checkbox-container__input(id="checkbox" type="checkbox", name="")
                     label.checkbox-container__label(for="checkbox") I Agree to the #[span terms of use]
                 button.form__button(type="submit") Sign Up
